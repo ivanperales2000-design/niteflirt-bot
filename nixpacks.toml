@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["chromium", "nodejs", "npm"]
+
+[phases.install]
+cmds = ["npm ci --only=production"]
+
+[phases.build]
+cmds = ["echo 'Build completed'"]
+
+[start]
+cmd = "node smart-human-bot.js"
