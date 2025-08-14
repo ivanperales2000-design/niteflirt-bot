@@ -132,7 +132,7 @@ app.post("/api/reply", async (req, res) => {
 
   const key = `${userId}:${threadId}`;
   const hist = memory.get(key) || [];
-  
+
   // Detectar idioma del mensaje
   const language = detectLanguage(lastMsg);
   

@@ -506,7 +506,7 @@ class SmartHumanBotServer {
   }
 
   async generateHumanResponse(clientName, chatHistory, language, context = 'proactive') {
-    console.log('🧠 Generando respuesta humana y natural...');
+    console.log('🧠 Generando respuesta humana y natural como Horny Madge...');
     
     try {
       const mood = await this.analyzeClientMood(chatHistory);
@@ -515,83 +515,83 @@ class SmartHumanBotServer {
       let responses = [];
       
       if (context === 'proactive') {
-        // Mensajes proactivos para iniciar conversación
+        // Mensajes proactivos para iniciar conversación - estilo Horny Madge
         if (language === 'spanish') {
           responses = [
-            `¡Hola ${clientName}! 😊 ¿Qué tal va tu día? Me encantaría saber cómo estás 💕`,
-            `Hey ${clientName}! 🌟 ¿Cómo te sientes hoy? Me gustaría charlar un poco contigo 😘`,
-            `¡Hola ${clientName}! 💖 ¿Qué has estado haciendo? Me interesa mucho saber de ti ✨`,
-            `Hey ${clientName}! 💫 ¿Cómo va todo por tu lado? Me gustaría conocer más sobre ti 😊`,
-            `¡Hola ${clientName}! 🌸 ¿Qué tal tu día? Me encantaría que me cuentes algo interesante 💕`,
-            `Hey ${clientName}! 😊 ¿Qué te gusta hacer en tu tiempo libre? Me interesa mucho saber 💫`,
-            `¡Hola ${clientName}! 🌟 ¿Tienes algún hobby o pasión? Me encantaría conocer más sobre ti 💖`,
-            `Hey ${clientName}! ✨ ¿Qué te hace feliz? Me gustaría saber qué te ilumina el día 😘`
+            `Hola ${clientName}, soy Horny Madge. ¿Cómo va tu día? Me encantaría saber más sobre ti y lo que te gusta hacer. ¿Qué te apasiona?`,
+            `Hey ${clientName}, soy Madge. ¿Qué tal estás hoy? Me gustaría conocer más sobre tu vida y tus intereses. ¿Qué te hace sentir vivo?`,
+            `Hola ${clientName}, soy Horny Madge. ¿Qué has estado haciendo últimamente? Me interesa mucho saber sobre tus experiencias y sueños. ¿Qué te gustaría compartir conmigo?`,
+            `Hey ${clientName}, soy Madge. ¿Cómo va todo por tu lado? Me gustaría que me cuentes algo interesante sobre ti. ¿Qué te motiva cada día?`,
+            `Hola ${clientName}, soy Horny Madge. ¿Qué tal tu día? Me encantaría que me cuentes algo que te haya pasado recientemente. ¿Qué te hace sonreír?`,
+            `Hey ${clientName}, soy Madge. ¿Qué te gusta hacer en tu tiempo libre? Me interesa mucho conocer tus hobbies y pasiones. ¿Qué te relaja?`,
+            `Hola ${clientName}, soy Horny Madge. ¿Tienes algún hobby o pasión que te apasione? Me encantaría conocer más sobre lo que te hace feliz. ¿Qué te gustaría explorar?`,
+            `Hey ${clientName}, soy Madge. ¿Qué te hace sentir especial? Me gustaría saber qué te ilumina el día y qué te gustaría experimentar. ¿Qué te gustaría que hablemos?`
           ];
         } else {
           responses = [
-            `Hey ${clientName}! 😊 How's your day going? I'd love to know how you're feeling 💕`,
-            `Hi ${clientName}! 🌟 How are you feeling today? I'd like to chat with you a bit 😘`,
-            `Hey ${clientName}! 💖 What have you been up to? I'm really interested in knowing more about you ✨`,
-            `Hi ${clientName}! 💫 How's everything on your side? I'd like to get to know you better 😊`,
-            `Hey ${clientName}! 🌸 How's your day? I'd love for you to tell me something interesting 💕`,
-            `Hi ${clientName}! 😊 What do you like to do in your free time? I'm really interested 💫`,
-            `Hey ${clientName}! 🌟 Do you have any hobbies or passions? I'd love to know more about you 💖`,
-            `Hi ${clientName}! ✨ What makes you happy? I'd like to know what brightens your day 😘`
+            `Hey ${clientName}, I'm Horny Madge. How's your day going? I'd love to know more about you and what you enjoy doing. What are you passionate about?`,
+            `Hi ${clientName}, I'm Madge. How are you feeling today? I'd like to learn more about your life and interests. What makes you feel alive?`,
+            `Hey ${clientName}, I'm Horny Madge. What have you been up to lately? I'm really interested in hearing about your experiences and dreams. What would you like to share with me?`,
+            `Hi ${clientName}, I'm Madge. How's everything on your side? I'd like you to tell me something interesting about yourself. What motivates you each day?`,
+            `Hey ${clientName}, I'm Horny Madge. How's your day? I'd love for you to tell me something that happened to you recently. What makes you smile?`,
+            `Hi ${clientName}, I'm Madge. What do you like to do in your free time? I'm really interested in learning about your hobbies and passions. What relaxes you?`,
+            `Hey ${clientName}, I'm Horny Madge. Do you have any hobbies or passions that excite you? I'd love to know more about what makes you happy. What would you like to explore?`,
+            `Hi ${clientName}, I'm Madge. What makes you feel special? I'd like to know what brightens your day and what you'd like to experience. What would you like us to talk about?`
           ];
         }
       } else if (context === 'conversation') {
-        // Respuestas para mantener conversación
+        // Respuestas para mantener conversación - estilo Horny Madge
         if (mood === 'romantic') {
           if (language === 'spanish') {
             responses = [
-              `Mmm ${clientName}, me encanta cuando hablas así... 😘 ¿Qué más tienes en mente? 💕`,
-              `Ay ${clientName}, me haces sonrojar... 🌸 ¿Qué te gustaría que hiciéramos? ✨`,
-              `Oh ${clientName}, eres tan dulce... 💖 ¿Me cuentas más sobre ti? 😊`,
-              `Mmm ${clientName}, me encantas... 💫 ¿Qué te gusta hacer cuando estás solo? 😘`
+              `Mmm ${clientName}, me encanta cuando hablas así. ¿Qué más tienes en mente? Me gustaría que me cuentes más sobre lo que te gusta.`,
+              `Ay ${clientName}, me haces sentir especial. ¿Qué te gustaría que hiciéramos juntos? Me encantaría conocer más sobre tus fantasías.`,
+              `Oh ${clientName}, eres tan dulce. ¿Me cuentas más sobre ti? Me gustaría saber qué te excita y qué te gustaría experimentar.`,
+              `Mmm ${clientName}, me encantas. ¿Qué te gusta hacer cuando estás solo? Me gustaría que me cuentes más sobre tus deseos más íntimos.`
             ];
           } else {
             responses = [
-              `Mmm ${clientName}, I love when you talk like that... 😘 What else do you have in mind? 💕`,
-              `Oh ${clientName}, you make me blush... 🌸 What would you like us to do? ✨`,
-              `Oh ${clientName}, you're so sweet... 💖 Tell me more about yourself? 😊`,
-              `Mmm ${clientName}, I adore you... 💫 What do you like to do when you're alone? 😘`
+              `Mmm ${clientName}, I love when you talk like that. What else do you have in mind? I'd like you to tell me more about what you enjoy.`,
+              `Oh ${clientName}, you make me feel special. What would you like us to do together? I'd love to know more about your fantasies.`,
+              `Oh ${clientName}, you're so sweet. Tell me more about yourself? I'd like to know what excites you and what you'd like to experience.`,
+              `Mmm ${clientName}, I adore you. What do you like to do when you're alone? I'd like you to tell me more about your deepest desires.`
             ];
           }
         } else if (mood === 'sad') {
           if (language === 'spanish') {
             responses = [
-              `Ay ${clientName}, no me gusta verte triste... 😔 ¿Qué puedo hacer para animarte? 💕`,
-              `Oh ${clientName}, me duele verte así... 🌸 ¿Quieres que te cuente algo que me hace feliz? ✨`,
-              `Cariño ${clientName}, estoy aquí para ti... 💖 ¿Qué te gustaría que hiciéramos juntos? 😊`,
-              `Mi amor ${clientName}, no estás solo... 💫 ¿Quieres que te abrace virtualmente? 😘`
+              `Ay ${clientName}, no me gusta verte triste. ¿Qué puedo hacer para animarte? Me gustaría que me cuentes qué te está pasando.`,
+              `Oh ${clientName}, me duele verte así. ¿Quieres que te cuente algo que me hace feliz? Me gustaría ayudarte a sentirte mejor.`,
+              `Cariño ${clientName}, estoy aquí para ti. ¿Qué te gustaría que hiciéramos juntos? Me encantaría que me cuentes más sobre lo que te preocupa.`,
+              `Mi amor ${clientName}, no estás solo. ¿Quieres que te abrace virtualmente? Me gustaría que me cuentes qué necesitas en este momento.`
             ];
           } else {
             responses = [
-              `Oh ${clientName}, I don't like seeing you sad... 😔 What can I do to cheer you up? 💕`,
-              `Oh ${clientName}, it hurts to see you like this... 🌸 Want me to tell you something that makes me happy? ✨`,
-              `Baby ${clientName}, I'm here for you... 💖 What would you like us to do together? 😊`,
-              `My love ${clientName}, you're not alone... 💫 Want me to give you a virtual hug? 😘`
+              `Oh ${clientName}, I don't like seeing you sad. What can I do to cheer you up? I'd like you to tell me what's going on.`,
+              `Oh ${clientName}, it hurts to see you like this. Want me to tell you something that makes me happy? I'd like to help you feel better.`,
+              `Baby ${clientName}, I'm here for you. What would you like us to do together? I'd love for you to tell me more about what's worrying you.`,
+              `My love ${clientName}, you're not alone. Want me to give you a virtual hug? I'd like you to tell me what you need right now.`
             ];
           }
         } else {
-          // Respuestas generales para mantener conversación
+          // Respuestas generales para mantener conversación - estilo Horny Madge
           if (language === 'spanish') {
             responses = [
-              `Mmm ${clientName}, eso suena interesante... 😊 ¿Cuéntame más? 💕`,
-              `Oh ${clientName}, me encanta cuando me cuentas cosas... 🌸 ¿Qué más tienes que decirme? ✨`,
-              `Ay ${clientName}, eres tan fascinante... 💖 ¿Qué más me puedes contar? 😊`,
-              `Mmm ${clientName}, me gusta mucho hablar contigo... 💫 ¿Qué te gustaría saber de mí? 😘`,
-              `Oh ${clientName}, cada vez que hablas me encantas más... 🌸 ¿Qué más tienes en mente? 💕`,
-              `Ay ${clientName}, me haces sentir especial... 💖 ¿Qué te gustaría que hiciéramos? ✨`
+              `Mmm ${clientName}, eso suena muy interesante. ¿Cuéntame más? Me gustaría saber todos los detalles.`,
+              `Oh ${clientName}, me encanta cuando me cuentas cosas. ¿Qué más tienes que decirme? Me gustaría que me cuentes más sobre ti.`,
+              `Ay ${clientName}, eres tan fascinante. ¿Qué más me puedes contar? Me gustaría conocer más sobre tus experiencias.`,
+              `Mmm ${clientName}, me gusta mucho hablar contigo. ¿Qué te gustaría saber de mí? Me encantaría que me preguntes algo personal.`,
+              `Oh ${clientName}, cada vez que hablas me encantas más. ¿Qué más tienes en mente? Me gustaría que me cuentes más sobre tus pensamientos.`,
+              `Ay ${clientName}, me haces sentir especial. ¿Qué te gustaría que hiciéramos? Me encantaría que me cuentes más sobre tus deseos.`
             ];
           } else {
             responses = [
-              `Mmm ${clientName}, that sounds interesting... 😊 Tell me more? 💕`,
-              `Oh ${clientName}, I love when you tell me things... 🌸 What else do you have to tell me? ✨`,
-              `Oh ${clientName}, you're so fascinating... 💖 What else can you tell me? 😊`,
-              `Mmm ${clientName}, I really like talking to you... 💫 What would you like to know about me? 😘`,
-              `Oh ${clientName}, every time you talk I like you more... 🌸 What else do you have in mind? 💕`,
-              `Oh ${clientName}, you make me feel special... 💖 What would you like us to do? ✨`
+              `Mmm ${clientName}, that sounds very interesting. Tell me more? I'd like to know all the details.`,
+              `Oh ${clientName}, I love when you tell me things. What else do you have to tell me? I'd like you to tell me more about yourself.`,
+              `Oh ${clientName}, you're so fascinating. What else can you tell me? I'd like to know more about your experiences.`,
+              `Mmm ${clientName}, I really like talking to you. What would you like to know about me? I'd love for you to ask me something personal.`,
+              `Oh ${clientName}, every time you talk I like you more. What else do you have in mind? I'd like you to tell me more about your thoughts.`,
+              `Oh ${clientName}, you make me feel special. What would you like us to do? I'd love for you to tell me more about your desires.`
             ];
           }
         }

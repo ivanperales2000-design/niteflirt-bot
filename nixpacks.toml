@@ -8,4 +8,4 @@ cmds = ["npm ci --only=production"]
 cmds = ["echo 'Build completed'"]
 
 [start]
-cmd = "node smart-human-bot.js"
+cmd = "node smart-human-bot-server.js"

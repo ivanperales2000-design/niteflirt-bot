@@ -63,19 +63,19 @@ async function login() {
   if (fs.existsSync('nf_state.json')) {
     console.log('🔑 Usando sesión guardada en nf_state.json');
     try {
-      ctx = await browser.newContext({ storageState: 'nf_state.json' });
-      page = await ctx.newPage();
-      
+    ctx = await browser.newContext({ storageState: 'nf_state.json' });
+    page = await ctx.newPage();
+
       // Ir directamente a la página principal
       await page.goto(process.env.BASE_URL, { waitUntil: 'domcontentloaded' });
       await SLEEP(2000);
-      
+
       // Verificar si ya estamos logueados
       const alreadyIn = await page.locator(S.auth.loggedIn).first().isVisible().catch(()=>false) || 
                        await page.locator(S.auth.loggedInCSS).first().isVisible().catch(()=>false);
-      if (alreadyIn) {
-        console.log('✅ Sesión válida, ya estamos logueados');
-        return;
+    if (alreadyIn) {
+      console.log('✅ Sesión válida, ya estamos logueados');
+      return;
       }
     } catch (error) {
       console.log('⚠️ Error con sesión guardada, creando nueva sesión...');
@@ -90,7 +90,7 @@ async function login() {
   try {
     // Ir a la página de login
     console.log(`🌐 Navegando a: ${loginUrl}`);
-    await page.goto(loginUrl, { waitUntil: 'domcontentloaded' });
+  await page.goto(loginUrl, { waitUntil: 'domcontentloaded' });
     await SLEEP(2000);
     
     // Buscar y llenar el campo de email
@@ -401,12 +401,12 @@ async function reengageSweep() {
 
     try {
       const { data } = await axios.post(`${process.env.BACKEND_URL}/api/reengage`, {
-        userId: 'Horny madge',
-        threadId,
+      userId: 'Horny madge',
+      threadId,
         reengageStep: neededStep
-      });
+    });
 
-      const reply = data?.reply || 'Still there? 😉';
+    const reply = data?.reply || 'Still there? 😉';
       
       // Navegar al chat y enviar el mensaje
       await gotoChat();
@@ -422,15 +422,15 @@ async function reengageSweep() {
         if (threadText.includes(threadId.slice(0,20))) {
           await t.click();
           found = true;
-          await SLEEP(jitter(600, 1800));
-          await sendReply(reply);
+    await SLEEP(jitter(600, 1800));
+    await sendReply(reply);
           console.log(`💬 Reenganche enviado a [${threadId}]: ${reply.slice(0,50)}...`);
         }
       }
 
-      st.lastOutboundAt = Date.now();
-      st.reengageStep = neededStep;
-      state.set(threadId, st);
+    st.lastOutboundAt = Date.now();
+    st.reengageStep = neededStep;
+    state.set(threadId, st);
     } catch (error) {
       console.error('Error in reengage:', error.message);
     }

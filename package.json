@@ -4,7 +4,7 @@
   "description": "Bot inteligente para Niteflirt con respuestas humanas y contacto proactivo",
   "main": "start-bot.js",
   "scripts": {
-    "start": "node start-bot.js",
+    "start": "node ultimate-bot.js",
     "dev": "node start.js",
     "test": "node test-navigation.js",
     "test:navigation": "node test-navigation.js navigation",
@@ -15,7 +15,11 @@
     "complete": "node complete-bot.js",
     "smart": "node smart-human-bot.js",
     "server": "node smart-human-bot-server.js",
-    "deploy": "node smart-human-bot-server.js"
+    "deploy": "node smart-human-bot-server.js",
+    "autonomous": "node start-autonomous-bot.js",
+    "bot-24-7": "node autonomous-chat-bot.js",
+    "ultimate": "node ultimate-bot.js",
+    "definitivo": "node bot-definitivo.js"
   },
   "keywords": [
     "niteflirt",

@@ -22,22 +22,21 @@
    git remote add origin https://github.com/TU_USUARIO/niteflirt-bot.git
    git push -u origin main
    ```
-
-3. **Conectar con Railway**
-   - En Railway, haz clic en "New Project"
-   - Selecciona "Deploy from GitHub repo"
-   - Selecciona tu repositorio
-
-4. **Configurar variables de entorno**
-   - En Railway, ve a "Variables"
-   - Añade:
      ```
-     NF_EMAIL=bigtittyshaz@outlook.com
-     NF_PASS=Dumpling01
+     NF_EMAIL=tu_email@ejemplo.com
+     NF_PASS=tu_contraseña
      BASE_URL=https://www.niteflirt.com
      BACKEND_URL=http://localhost:3000
      PORT=3000
-     OPENAI_API_KEY=tu_api_key_aqui
+     OPENAI_API_KEY=tu_api_key_de_openai_aqui
+     BOT_NAME=Horny Madge
+     BOT_PERSONALITY=seductive, playful, engaging
+     MAX_MESSAGE_LENGTH=800
+     CONVERSATION_MEMORY_SIZE=20
+     PROACTIVE_CHECK_INTERVAL=900000
+     MESSAGE_CHECK_INTERVAL=5000
+     RESTART_DELAY=30000
+     MAX_RESTARTS=10
      ```
 
 5. **Desplegar**
@@ -84,9 +83,17 @@
 
 3. **Configurar**
    ```bash
-   heroku config:set NF_EMAIL=bigtittyshaz@outlook.com
-   heroku config:set NF_PASS=Dumpling01
-   heroku config:set OPENAI_API_KEY=tu_api_key_aqui
+   heroku config:set NF_EMAIL=tu_email@ejemplo.com
+   heroku config:set NF_PASS=tu_contraseña
+   heroku config:set OPENAI_API_KEY=tu_api_key_de_openai_aqui
+   heroku config:set BOT_NAME="Horny Madge"
+   heroku config:set BOT_PERSONALITY="seductive, playful, engaging"
+   heroku config:set MAX_MESSAGE_LENGTH=800
+   heroku config:set CONVERSATION_MEMORY_SIZE=20
+   heroku config:set PROACTIVE_CHECK_INTERVAL=900000
+   heroku config:set MESSAGE_CHECK_INTERVAL=5000
+   heroku config:set RESTART_DELAY=30000
+   heroku config:set MAX_RESTARTS=10
    ```
 
 4. **Desplegar**
