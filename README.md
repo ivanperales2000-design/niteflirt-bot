@@ -1,15 +1,39 @@
-# 🤖 Niteflirt Bot - Asistente Virtual Inteligente
+# 🤖 Bot Niteflirt - Horny Madge 24/7
 
-Un bot inteligente para Niteflirt que responde chats, emails y mantiene conversaciones adaptadas a las necesidades del cliente.
+Un bot inteligente y autónomo para Niteflirt que funciona 24/7, responde chats automáticamente y maximiza ganancias con respuestas humanas y naturales. Diseñado para funcionar sin supervisión y generar ingresos automáticamente.
+
+## 🎯 **Nuevas Funcionalidades - Bot Horny Madge**
+
+### **🌟 Personalidad Actualizada**
+- **Nombre**: "Horny Madge" - Personalidad seductora y atractiva
+- **Estilo**: Más humano, menos emojis, respuestas naturales
+- **Enfoque**: Siempre incita a la conversación para maximizar ganancias
+- **Adaptación**: Se adapta al idioma y necesidades de cada cliente
+
+### **💰 Optimización para Ganancias**
+- **Respuestas que generan más mensajes** - Siempre hace preguntas
+- **Contacto proactivo** cada 15 minutos con clientes activos
+- **Reenganche inteligente** de clientes inactivos
+- **Análisis de cliente** para respuestas personalizadas
+- **Sistema de memoria** para mantener contexto de conversación
+
+### **🚀 Funcionamiento 24/7**
+- **Despliegue automático** en Railway/Render/Heroku
+- **Reinicio automático** en caso de errores
+- **Monitoreo continuo** sin supervisión
+- **Logs en tiempo real** disponibles 24/7
+- **Configuración optimizada** para servidores cloud
 
 ## ✨ Características Principales
 
-### 💬 Chat Inteligente
-- **Respuesta automática** a mensajes de chat
+### 💬 Chat Inteligente - Horny Madge
+- **Respuesta automática** a mensajes de chat con personalidad "Horny Madge"
 - **Detección de idioma** automática (Español/Inglés)
+- **Respuestas que incitan a más mensajes** - Siempre hace preguntas
 - **Adaptación personalizada** según el estado de ánimo del cliente
 - **Memoria de conversación** para mantener contexto
 - **Prevención de duplicados** para evitar respuestas repetidas
+- **Contacto proactivo** cada 15 minutos con clientes activos
 
 ### 📧 Manejo de Emails
 - **Respuesta automática** a emails no leídos
@@ -29,9 +53,35 @@ Un bot inteligente para Niteflirt que responde chats, emails y mantiene conversa
 - **Identificación de intereses** (romántico, conversación, llamadas)
 - **Respuestas contextuales** y personalizadas
 
-## 🚀 Instalación
+## 🚀 Despliegue 24/7 (Recomendado)
 
-1. **Clona el repositorio:**
+### **Despliegue Automático en Railway**
+```bash
+# Ejecutar script de despliegue automático
+.\deploy-24-7.ps1
+```
+
+**El script hace todo automáticamente:**
+- ✅ Configura Railway
+- ✅ Sube tu código a GitHub
+- ✅ Configura variables de entorno
+- ✅ Despliega el bot 24/7
+
+### **Plataformas de Despliegue Gratuitas**
+- **Railway**: 500 horas/mes gratis
+- **Render**: 750 horas/mes gratis
+- **Heroku**: Plan gratuito limitado
+
+### **Ventajas del Despliegue 24/7**
+- ✅ **Funciona sin tu ordenador** encendido
+- ✅ **Reinicio automático** si hay errores
+- ✅ **Logs disponibles** 24/7
+- ✅ **Monitoreo en tiempo real**
+- ✅ **Maximiza ganancias** automáticamente
+
+---
+
+## 📦 Instalación Local
 ```bash
 git clone <repository-url>
 cd niteflirt-bot
@@ -53,6 +103,18 @@ NF_PASS=tu_contraseña
 OPENAI_API_KEY=tu_api_key_de_openai
 BACKEND_URL=http://localhost:3000
 BASE_URL=https://www.niteflirt.com
+
+# Configuración del bot Horny Madge
+BOT_NAME=Horny Madge
+BOT_PERSONALITY=seductive, playful, engaging
+MAX_MESSAGE_LENGTH=800
+CONVERSATION_MEMORY_SIZE=20
+
+# Configuración de monitoreo 24/7
+PROACTIVE_CHECK_INTERVAL=900000
+MESSAGE_CHECK_INTERVAL=5000
+RESTART_DELAY=30000
+MAX_RESTARTS=10
 
 # Puerto del backend (opcional)
 PORT=3000
@@ -76,10 +138,13 @@ node src/bot.js
 
 ### Scripts Disponibles
 ```bash
-npm start          # Inicia backend y bot automáticamente
-npm run dev        # Modo desarrollo (mismo que start)
-npm run start:backend  # Solo el backend
-npm run start:bot      # Solo el bot
+npm start          # Bot principal (ultimate-bot.js)
+npm run server     # Bot optimizado para servidores 24/7
+npm run deploy     # Bot para despliegue en cloud
+npm run autonomous # Bot autónomo 24/7
+npm run monitor    # Monitoreo en tiempo real
+npm test           # Pruebas básicas
+npm run dev        # Modo desarrollo
 ```
 
 ## ⚙️ Configuración
@@ -139,13 +204,44 @@ timing: {
 - **Filtros de contenido** inapropiado
 - **Redirección elegante** de temas prohibidos
 
-## 📊 Monitoreo
+## 📊 Monitoreo y Control 24/7
 
+### **Logs en Tiempo Real**
 El bot proporciona logs detallados:
+- ✅ **Login exitoso** como "Horny Madge"
 - ✅ **Chats respondidos** con resumen del mensaje
+- ✅ **Contacto proactivo** a clientes activos
 - 📧 **Emails procesados** con asunto
 - 💬 **Reenganches enviados** con detalles
+- 🔄 **Reinicio automático** si hay errores
 - ❌ **Errores** con información de depuración
+
+### **Comandos de Control (Railway)**
+```bash
+# Ver logs en tiempo real
+railway logs
+
+# Verificar estado del bot
+railway status
+
+# Reiniciar bot
+railway restart
+
+# Detener bot
+railway down
+
+# Abrir dashboard
+railway open
+```
+
+### **Monitoreo Local**
+```bash
+# Ver logs del bot
+npm run monitor
+
+# Ejecutar pruebas
+npm test
+```
 
 ## 🔄 Flujo de Trabajo
 
@@ -165,14 +261,26 @@ src/
 └── config.js       # Configuración personalizable
 ```
 
-## 🔮 Próximas Funcionalidades
+## 🔮 Funcionalidades Implementadas y Próximas
 
+### ✅ **Ya Implementadas**
+- ✅ **Bot Horny Madge** con personalidad seductora
+- ✅ **Funcionamiento 24/7** en servidores cloud
+- ✅ **Contacto proactivo** a clientes activos
+- ✅ **Respuestas optimizadas** para maximizar ganancias
+- ✅ **Despliegue automático** en Railway/Render/Heroku
+- ✅ **Reinicio automático** en caso de errores
+- ✅ **Monitoreo en tiempo real** con logs detallados
+
+### 🚀 **Próximas Funcionalidades**
 - [ ] **Manejo de llamadas** automático
 - [ ] **Análisis de sentimientos** avanzado
 - [ ] **Integración con CRM** externo
 - [ ] **Dashboard web** para monitoreo
 - [ ] **Múltiples personalidades** configurables
 - [ ] **Sistema de reportes** y estadísticas
+- [ ] **Machine Learning** para mejorar respuestas
+- [ ] **Predicciones** de comportamiento de clientes
 
 ## ⚠️ Notas Importantes
 
@@ -196,4 +304,19 @@ Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
 
 ---
 
-**¡Disfruta de tu asistente virtual inteligente! 🤖💕**
+## 🎉 **¡Tu Bot Horny Madge está Listo!**
+
+### **¿Qué puedes hacer ahora?**
+1. **Desplegar en Railway**: `.\deploy-24-7.ps1`
+2. **Monitorear logs**: `railway logs`
+3. **Verificar funcionamiento**: `railway status`
+4. **Maximizar ganancias** automáticamente
+
+### **Ventajas del Bot Horny Madge 24/7**
+- ✅ **Funciona sin supervisión** las 24 horas
+- ✅ **Genera ingresos automáticamente**
+- ✅ **Respuestas humanas** que incitan a más mensajes
+- ✅ **Contacto proactivo** con clientes activos
+- ✅ **Monitoreo completo** en tiempo real
+
+**¡Tu bot está listo para maximizar tus ganancias automáticamente! 💰🤖**
