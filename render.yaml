@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: niteflirt-bot-horny-madge
+    env: node
+    buildCommand: npm install && npx playwright install chromium
+    startCommand: node smart-human-bot-server.js
+    envVars:
+      - key: NF_EMAIL
+        value: tu_email_real@ejemplo.com
+      - key: NF_PASS
+        value: tu_contraseña_real
+      - key: OPENAI_API_KEY
+        value: tu_api_key_de_openai
+      - key: BOT_NAME
+        value: Horny Madge
+      - key: BOT_PERSONALITY
+        value: seductive, playful, engaging
+      - key: MAX_MESSAGE_LENGTH
+        value: 800
+      - key: CONVERSATION_MEMORY_SIZE
+        value: 20
+      - key: PROACTIVE_CHECK_INTERVAL
+        value: 900000
+      - key: MESSAGE_CHECK_INTERVAL
+        value: 5000
+      - key: RESTART_DELAY
+        value: 30000
+      - key: MAX_RESTARTS
+        value: 10
+      - key: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD
+        value: 0
