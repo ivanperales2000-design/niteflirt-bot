@@ -5,6 +5,28 @@ require('dotenv').config();
 const S = require('./src/selectors');
 const axios = require('axios');
 
+// Validación de variables de entorno críticas
+function validateEnvironment() {
+  const requiredVars = ['NF_EMAIL', 'NF_PASS', 'OPENAI_API_KEY'];
+  const missing = [];
+  
+  for (const varName of requiredVars) {
+    if (!process.env[varName] || process.env[varName] === 'tu_email_real@ejemplo.com') {
+      missing.push(varName);
+    }
+  }
+  
+  if (missing.length > 0) {
+    console.error('❌ Variables de entorno faltantes o no configuradas:');
+    missing.forEach(varName => console.error(`   - ${varName}`));
+    console.error('🔧 Por favor, configura estas variables en Render antes de continuar.');
+    return false;
+  }
+  
+  console.log('✅ Variables de entorno validadas correctamente');
+  return true;
+}
+
 const SLEEP = ms => new Promise(r => setTimeout(r, ms));
 const jitter = (a,b) => Math.floor(Math.random()*(b-a+1))+a;
 
@@ -952,6 +974,14 @@ class SmartHumanBotServer {
 
 // Función principal
 async function main() {
+  console.log('🔍 Validando configuración del entorno...');
+  
+  // Validar variables de entorno antes de iniciar
+  if (!validateEnvironment()) {
+    console.error('❌ Configuración inválida. Deteniendo bot.');
+    process.exit(1);
+  }
+  
   const bot = new SmartHumanBotServer();
   
   process.on('SIGINT', async () => {
