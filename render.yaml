@@ -29,3 +29,5 @@ services:
         value: 10
       - key: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD
         value: 0
+      - key: PLAYWRIGHT_CHROMIUM_PATH
+        value: /opt/render/.cache/ms-playwright/chromium-1181/chrome-linux/chrome
